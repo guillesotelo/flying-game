@@ -12,10 +12,10 @@ export const planePosition = new Vector3(0, 3, 7);
 const delayedRotMatrix = new Matrix4();
 const delayedQuaternion = new Quaternion();
 
-export default function Airplane(props: any) {
-  const { nodes, materials } = useGLTF('assets/models/airplane.glb') as any;
+export default function Airplane(props) {
+  const { nodes, materials } = useGLTF('assets/models/airplane.glb');
   const groupRef = useRef();
-  const helixMeshRef: any = useRef();
+  const helixMeshRef = useRef();
 
   useFrame(({ camera }) => {
     updatePlaneAxis(x, y, z, planePosition, camera);

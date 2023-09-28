@@ -2,8 +2,8 @@ import { useEffect, useMemo } from "react";
 import { MeshReflectorMaterial, useGLTF } from "@react-three/drei";
 import { Color, MeshStandardMaterial } from "three";
 
-export default function Landscape(props: any) {
-    const { nodes, materials } = useGLTF("assets/models/scene.glb") as any;
+export default function Landscape(props) {
+    const { nodes, materials } = useGLTF("assets/models/scene.glb");
 
     const [lightsMaterial, waterMaterial] = useMemo(() => {
         return [

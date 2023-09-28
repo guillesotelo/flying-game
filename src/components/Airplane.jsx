@@ -47,16 +47,16 @@ export default function Airplane(props) {
     const cameraMatrix = new Matrix4()
       .multiply(new Matrix4().makeTranslation(planePosition.x, planePosition.y, planePosition.z))
       .multiply(delayedRotMatrix)
-      .multiply(new Matrix4().makeRotationX(-0.2))
+      .multiply(new Matrix4().makeRotationX(-0.15))
       .multiply(
-        new Matrix4().makeTranslation(0, 0.015, 0.3)
+        new Matrix4().makeTranslation(0, 0.015, 0.4)
       );
 
     camera.matrixAutoUpdate = false;
     camera.matrix.copy(cameraMatrix);
     camera.matrixWorldNeedsUpdate = true;
 
-    helixMeshRef.current.rotation.z -= 1.0;
+    helixMeshRef.current.rotation.z -= 1;
   });
 
   return (

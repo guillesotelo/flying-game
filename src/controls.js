@@ -15,7 +15,7 @@ window.addEventListener("keyup", (e) => {
 let maxVelocity = 0.04;
 let jawVelocity = 0;
 let pitchVelocity = 0;
-let planeSpeed = 0.006;
+let planeSpeed = 0.01;
 export let turbo = 0;
 export function updatePlaneAxis(x, y, z, planePosition, camera) {
   jawVelocity *= 0.95;
@@ -28,19 +28,19 @@ export function updatePlaneAxis(x, y, z, planePosition, camera) {
     pitchVelocity = Math.sign(pitchVelocity) * maxVelocity;
 
   if (controls["a"]) {
-    jawVelocity += 0.0025;
+    jawVelocity += 0.002;
   }
 
   if (controls["d"]) {
-    jawVelocity -= 0.0025;
+    jawVelocity -= 0.002;
   }
 
   if (controls["w"]) {
-    pitchVelocity -= 0.0025;
+    pitchVelocity -= 0.002;
   }
 
   if (controls["s"]) {
-    pitchVelocity += 0.0025;
+    pitchVelocity += 0.002;
   }
 
   if (controls["r"]) {
